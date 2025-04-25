@@ -1,0 +1,759 @@
+/* 全局字体与基本布局 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #2a9d8f;
+  text-decoration: underline;
+}
+
+{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.header-bar {
+  height: 60px;
+  background-color: #00333d;
+}
+
+.nav-center {
+  background: white;
+  display: grid; 
+  grid-template-columns: 1fr auto 1fr; 
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.nav-left a,
+.nav-right a {
+  text-decoration: none;     
+  color: #00333d;            
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-left a:hover,
+.nav-right a:hover {
+  color: #2a9d8f;            
+}
+
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-logo img {
+  height: 80px;
+  margin-bottom: 5px;
+}
+
+.nav-logo span {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  color: #00333d;
+}
+
+/* Dropdown 组件样式 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  text-decoration: none;
+  font-weight: bold;
+  color: #00333d;
+  padding: 8px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+  z-index: 1000;
+  border-radius: 6px;
+}
+
+.dropdown-content a {
+  color: #002147;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f8ff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  color: #2a9d8f;
+}
+
+/*中间的图片和导语*/
+
+.georgia-hero {
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  overflow: hidden;
+}
+
+
+.image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  display: flex;
+  align-items: flex-end; 
+  z-index: 0;
+}
+
+
+.left-image {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.right-image {
+  width: 40%;
+  height: 120%;
+  object-fit: cover;
+}
+
+
+.left-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.right-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.7); 
+  z-index: 1;
+}
+
+.hero-textbox {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding: 30px 40px;
+  max-width: 800px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-textbox p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.hero-textbox h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/*中间部分的导向图标*/
+
+.info-links {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.info-links h2 {
+  font-size: 22px;
+  color: #002147; 
+  margin-bottom: 30px;
+}
+
+.link-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.link-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #00333d;
+  border: 3px solid #00333d;
+  border-radius: 20px;
+  padding: 25px 30px;
+  width: 120px;
+  transition: 0.3s ease;
+}
+
+.link-box i {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.link-box span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.link-box:hover {
+  background-color: #f1f1f1;
+  transform: scale(1.05);
+}
+
+/*peach state说明*/
+
+.state-highlight {
+  background-color: #00333d; 
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 30px;
+  border-radius: 12px;
+  margin-top: 60px;
+}
+
+.state-image {
+  flex: 1 1 350px;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.state-text {
+  flex: 2 1 500px;
+}
+
+.state-text h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.state-text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/*城市图片*/
+.featured-banner {
+  width: 100%;
+  height: 500px; 
+  overflow: hidden; 
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+.featured-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom; 
+}
+
+
+/*城市图片导项标*/
+.featured-guides {
+  margin: 60px auto;
+  padding: 0 30px;
+  max-width: 1200px;
+}
+
+.featured-guides h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002147;
+  margin-bottom: 25px;
+}
+
+.guide-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.guide-card {
+  flex: 1 1 250px;
+  background-color: #f4fafa;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.guide-card:hover {
+  transform: scale(1.03);
+}
+
+.guide-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.guide-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #002147;
+}
+
+.guide-caption i {
+  font-size: 14px;
+  color: #002147;
+}
+
+.georgia-banner {
+  background-image: url("images/city_view.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.georgia-text-box {
+  border: 2px solid white;
+  padding: 20px 40px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  background-color: rgba(0, 0, 0, 0.2); 
+  border-radius: 6px;
+  max-width: 90%;
+}
+
+
+/*footer*/
+
+
+.footer-nav {
+  background-color: #00333d;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+/*Contact*/
+
+ {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+    }
+
+    .contact-container {
+      max-width: 600px;
+      background-color: #00333d;
+      color: white;
+      margin: 80px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .contact-container h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #999;
+    }
+
+    .form-group textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: white;
+      color: #00333d;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .submit-btn:hover {
+      background-color: #f1f1f1;
+    }
+
+/*Success*/
+ .success-container {
+  background-color: #00333d;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  margin: 100px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.success-container a {
+  color: #ffccff;
+  text-decoration: underline;
+}
+/*Follow Social*/
+.social-sidebar {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  width: 80px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 10px 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  z-index: 1000;
+}
+
+.social-sidebar h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.social-sidebar a {
+  display: block;
+  margin: 10px 0;
+}
+
+.social-sidebar i {
+  font-size: 20px;
+  color: white;
+  background-color: #003366;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Hover  */
+.social-sidebar i:hover {
+  transform: scale(1.2);
+  background-color: #005577;
+}
+
+
+
+/* ========== transport Page Styles ========== */
+ {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  padding: 20px;
+}
+.card {
+  background-color: #00333d;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 900px; 
+  width: 90%;       
+}
+
+h2 {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  color: white;
+}
+
+th {
+  background-color: #00333d;
+}
+.emoji {
+  font-size: 24px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #00333d;
+  font-weight: bold;
+}
+
+/* ==========  education&art&history Pages ========== */
+{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #00333d;
+  color: #00333d;
+}
+
+.content-section {
+  background-color: #00333d;
+  color: #00333d;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #00333d;
+}
+
+.content-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00333d;
+}
+
+.content-section img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.content-section p {
+  line-height: 1.6;
+  color: #00333d;
+}
+/* ==========  cities Pages ========== */
+.cities-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  color: white;
+  position: relative; 
+}
+
+.cities-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cities-card {
+  background-color: white;
+  color: #00333d;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  overflow: hidden; 
+  position: relative;
+}
+
+.city-icon {
+  float: left;             
+  width: 100px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.city-badge {
+  position: absolute;      
+  top: 10px;
+  right: 15px;
+  background: #2a9d8f;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.cities-card ol {
+  padding-left: 20px;
+}
+
+.cities-card li {
+  margin-bottom: 20px;
+}
+
+.cities-card h3 {
+  margin: 0;
+}
+
+.cities-card ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+/*city*/
+ {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #00333d;
+  color: white;
+  line-height: 1.6;
+}
+
+
+.city-header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #00333d;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.city-content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.city-content h2 {
+  color: #2a9d8f;
+  margin-top: 0;
+}
+
+.city-content img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.city-content .source {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.city-aside {
+  background-color: #f1f1f1;
+  color: #00333d;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #2a9d8f;
+  text-decoration: underline;
+}
+
+a:focus,
+a:active {
+  outline: none;
+  background: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.city-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+}
