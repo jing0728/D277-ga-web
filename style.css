@@ -656,7 +656,7 @@ th {
   top: 10px;
   right: 15px;
   background: #2a9d8f;
-  color: white;
+  color: #00333d;
   padding: 5px 10px;
   border-radius: 6px;
   font-weight: bold;
@@ -703,7 +703,7 @@ th {
   margin: 20px auto;
   padding: 20px;
   background-color: white;
-  color: #ffffff;
+  color: #00333d;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
