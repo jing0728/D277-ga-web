@@ -4,6 +4,7 @@ class HeaderComponent extends HTMLElement {
       <div class="header-bar"></div>
 
       <header>
+       <nav>
         <div class="nav-center">
           <div class="nav-left">
             <a href="index.html">Home</a>
@@ -32,7 +33,7 @@ class HeaderComponent extends HTMLElement {
   <a href="contact.html">Contact</a>
 </div>
 
-
+          <nav>
         </div>
       </header>
     `;
